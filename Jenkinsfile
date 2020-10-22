@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Build Docker Image') {
             steps {
-                input 'Build the the Docker Image?'
+                input 'Build the Docker Image?'
                 milestone(1)
                 script {
                     app = docker.build("mcweenjr/hello-world-war:${env.BUILD_ID}")
